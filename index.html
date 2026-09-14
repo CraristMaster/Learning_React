@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeMaster | Digital Study Guide</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Code<span>Master</span></div>
+    <nav>
+      <button class="nav-btn active" data-view="home">Study Guide</button>
+      <button class="nav-btn" data-view="quiz">Quiz</button>
+      <button class="nav-btn" data-view="results">Results</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="home-view" class="view active">
+      <div class="hero">
+        <div>
+          <p class="eyebrow">INTERACTIVE DIGITAL STUDY GUIDE</p>
+          <h1>Master the basics of coding.</h1>
+          <p>Study short notes, learn key terms, view simple diagrams, then test yourself with an interactive quiz.</p>
+          <button class="primary" id="startQuizBtn">Start Quiz →</button>
+        </div>
+        <div class="hero-card">
+          <div class="code-symbol">&lt;/&gt;</div>
+          <strong>4 Modules</strong>
+          <span>Notes + Terms + Quiz</span>
+        </div>
+      </div>
+
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">SUBJECT MODULES</p>
+          <h2>Choose a module</h2>
+        </div>
+        <span class="pill">Basic Coding</span>
+      </div>
+
+      <div id="moduleGrid" class="module-grid"></div>
+    </section>
+
+    <section id="quiz-view" class="view">
+      <div class="quiz-header">
+        <div>
+          <p class="eyebrow">KNOWLEDGE CHECK</p>
+          <h2 id="quizTitle">Coding Quiz</h2>
+        </div>
+        <div class="score-box">Score: <strong id="liveScore">0</strong></div>
+      </div>
+
+      <div class="progress-wrap">
+        <div class="progress-label">
+          <span id="questionCount">Question 1 of 8</span>
+          <span id="progressPercent">0%</span>
+        </div>
+        <div class="progress"><div id="progressBar"></div></div>
+      </div>
+
+      <article class="question-card">
+        <span id="questionModule" class="pill">Variables</span>
+        <h3 id="questionText"></h3>
+        <div id="answers" class="answers"></div>
+        <div id="feedback" class="feedback hidden"></div>
+        <button id="nextBtn" class="primary hidden">Next Question →</button>
+      </article>
+    </section>
+
+    <section id="results-view" class="view">
+      <div class="result-card">
+        <p class="eyebrow">QUIZ COMPLETE</p>
+        <h1 id="finalGrade">A</h1>
+        <p id="resultMessage"></p>
+        <div class="result-stats">
+          <div><strong id="finalScore">0/8</strong><span>Score</span></div>
+          <div><strong id="finalPercent">0%</strong><span>Percentage</span></div>
+        </div>
+      </div>
+
+      <div class="recommendation-card">
+        <p class="eyebrow">PERSONALIZED REVIEW</p>
+        <h2>Recommended modules</h2>
+        <p>Review the topics you missed before attempting the quiz again.</p>
+        <div id="recommendations"></div>
+      </div>
+
+      <button class="primary" id="retryBtn">Try Quiz Again ↻</button>
+    </section>
+  </main>
+
+  <footer>CodeMaster • Interactive Digital Study Guide & Quiz Engine</footer>
+  <script src="script.js"></script>
+</body>
+</html>
